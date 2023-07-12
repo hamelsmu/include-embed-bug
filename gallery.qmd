@@ -1,0 +1,12 @@
+---
+---
+
+::: {.content-block .grid .gap-4}
+
+
+::: {.g-col-6 .g-col-md-4}
+{{< embed PlotnineAnimation.ipynb#spiral >}}
+:::
+
+
+:::

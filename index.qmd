@@ -1,0 +1,26 @@
+---
+title: "Home"
+---
+
+This is a gallery
+
+```{python}
+#|echo: false
+
+plots=['PlotnineAnimation.ipynb#spiral',]
+
+def create_gallery(ids, outfile='gallery.qmd'):
+    gallery = ""
+    for id in ids:
+        gallery += '\n::: {.g-col-6 .g-col-md-4}\n'
+        gallery += f"{{{{< embed {id} >}}}}"
+        gallery += '\n:::\n'
+    with open(outfile, 'w') as f:
+        f.write("---\n---\n\n::: {.content-block .grid .gap-4}\n\n")
+        f.write(gallery)
+        f.write("\n\n:::\n")
+
+create_gallery(plots)
+```
+
+{{< include gallery.qmd >}}
